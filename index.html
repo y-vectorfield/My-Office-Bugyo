@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="icon" href="./images/bugyo.ico">
+        <title>マイオフィス奉行</title>
+        <link rel="stylesheet" type="text/css" href="./css/bugyo.css">
+    </head>
+    <body class="body">
+        <div style="text-align: center;">
+            <h1>
+                <img id="bugyo1" src="images/bugyo.png" style="width: 60px";></img>
+                <font size="7">マイオフィス奉行</font>
+                <img id="bugyo2" src="images/bugyo.png" style="width: 60px";></img>
+            </h1>
+        </div>
+        <div>
+            <span class="mgl-10"></span>
+        </div>
+        <div style="text-align: left;">
+            <!-- 御白州1 -->
+            <div><font size="4"><span class="mgl-10"><strong>● 御白州 其の一: 半角文字を全角文字に変換</strong></span></font><br><br>
+            <form id="oshirasu1"><span class="mgl-30">入力内容: <input type="text" id="halftofull" class="textbox1"></span>
+            <input type="button" id="button1" value="お裁き" class="button" onclick="osabaki1()"><span class="mgl-10" id="status1"></span><br></form></div><br><br>
+            
+            <!-- 御白州2 -->
+            <div><font size="4"><span class="mgl-10"><strong>● 御白州 其の二: 文字数制限を満たす長さに変換(短文用)</strong></span></font><br><br>
+            <form id="oshirasu2"><span class="mgl-30">入力内容: <input type="text" id="sentence" class="textbox1"></span><br><br>
+            <span class="mgl-30">文字数: <input type="text" id="len-num1" class="textbox2" value=15>文字
+            <input type="button" id="button2" value="お裁き" class="button" onclick="osabaki2()"><span class="mgl-10" id="status2"></span><br></form></div><br><br>
+
+            <!-- 御白州3 -->
+            <div><font size="4"><span class="mgl-10"><strong>● 御白州 其の三: 文字数制限を満たす文章に変換</strong></span></font><br><br>
+            <form id="oshirasu3"><span class="mgl-30">入力内容:<br><textarea id="longsentence" class="textbox3"></textarea></span><br>
+            <span class="mgl-30 mgr-20">文字数: <input type="text" id="len-num2" class="textbox4" value=100>文字
+            <input type="button" id="button3" value="お裁き" class="button" onclick="osabaki3()"><span class="mgl-10" id="status3"></span><br></form></div>
+        </div>
+        <script type="text/javascript">
+        "use stirct";
+        const bugyo1 = document.getElementById("bugyo1");
+        const bugyo2 = document.getElementById("bugyo2");
+
+        // 左側の奉行の仕事
+        bugyo1.onclick = function(){
+            let msg = "マイオフィスの面倒な仕様はマイオフィス奉行にお任せあれ!!\n\n";
+            msg += "使い方指南:\n「入力内容」の欄に申請フォームで入力したい内容、「文字数」の欄に制限文字数を入力して「お裁き」ボタンを押します。";
+            msg += "クリップボードに内容がコピーされるので、後はCtrl+Vで入力したい箇所にペーストするだけです。\n";
+            msg += "作業終了時は「右側の奉行」をクリックしてフォームをクリアしましょう。\n\nDeveloped by Yuhki Yano";
+            alert(msg);
+        }
+        
+        // 右側の奉行の仕事
+        bugyo2.onclick = function(){
+            alert("本日の白州はこれまで!!\n\nマイオフィス奉行");
+
+            // クリップボードのクリア作業
+            clearClipboard();
+
+            // フォームのクリア
+            document.getElementById("halftofull").value = "";
+            document.getElementById("sentence").value = "";
+            document.getElementById("longsentence").value = "";
+            document.getElementById("status1").innerHTML = "";
+            document.getElementById("status2").innerHTML = "";
+            document.getElementById("status3").innerHTML = "";
+        }
+
+        function clearClipboard(){
+            document.getElementById("halftofull").value = " ";
+            document.getElementById("sentence").value = " ";
+            document.getElementById("len-num1").value = 15;
+            document.getElementById("longsentence").value = " ";
+            document.getElementById("len-num2").value = 100;
+            const result1 = document.getElementsByTagName("input")[0];
+            result1.select();
+            document.execCommand("copy");
+            const result2 = document.getElementsByTagName("input")[2];
+            result2.select();
+            document.execCommand("copy");
+            const result3 = document.getElementsByTagName("textarea")[0];
+            result3.select();
+            document.execCommand("copy");
+        }
+        </script>
+        <script type="text/javascript" src="js/bugyo.js"></script>
+    </body>
+</html>
