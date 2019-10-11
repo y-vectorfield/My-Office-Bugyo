@@ -20,14 +20,3 @@
 * テストフレームワークにはjQueryベースで簡単に使える[QUnit](http://qunitjs.com/)を利用しています。
 
 This software is released under the MIT License, see [LICENSE.txt](LICENSE.txt).
-=======
-社内システム「マイオフィス」の煩わしい仕様に悩まされる生活におさらばするためのツール
-
-## 使い方
-使い方はとっても簡単。
-
-1. まずソースをダウンロードして適当な場所(例:Cドライブ直下など)に置きます。
-
-2. my-office-bugyoディレクトリ内の[index.html](index.html)をダブルクリックしてブラウザで開きます。
-
-3. 開いたページをお気に入り登録することでいつでも利用可能です。
