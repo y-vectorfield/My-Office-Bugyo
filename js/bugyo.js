@@ -1,7 +1,7 @@
 function toFullWidth(value){
-    return value.replace(/[ -~]/g, s => {
-            return String.fromCharCode(s.charCodeAt(0) + 0xfee0)
-    }) 
+    return value.replace(/\u0020/g,"\u3000").replace(/[ -~]/g, s => {
+            return String.fromCharCode(s.charCodeAt(0) + 0xfee0);
+    }); 
 } 
 
 function deleteSpace(value){
