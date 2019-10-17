@@ -65,7 +65,7 @@ function osabaki3(){
         document.getElementById("status2").innerHTML = "整数値を入力して下さい!!";
         return;
     }
-    document.getElementById("sentence").value = full_and_length(value, length);
+    document.getElementById("longsentence").value = full_and_length(value, length);
     document.getElementById("status3").innerHTML = "お裁き完了!!";
     const result = document.getElementsByTagName("textarea")[0];
     result.select();
