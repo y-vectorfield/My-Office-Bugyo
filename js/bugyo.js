@@ -112,3 +112,19 @@ function osabaki3(){
     const result = document.getElementsByTagName("textarea")[0].value;
     navigator.clipboard.writeText(result);
 }
+
+function showLength(value, code) {
+    document.getElementById("inputlength").innerHTML = value.length;
+}
+
+function showSentenceLength(value) {
+    document.getElementById("inputlength2").innerHTML = value.length;
+    let limitLength = Number(document.getElementById("len-num1").value);
+    document.getElementById("remainlength2").innerHTML = limitLength - value.length;
+}
+
+function showLongSentenceLength(value) {
+    document.getElementById("inputlength3").innerHTML = value.length;
+    let limitLength = Number(document.getElementById("len-num2").value);
+    document.getElementById("remainlength3").innerHTML = limitLength - value.length;
+}
