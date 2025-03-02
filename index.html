@@ -11,9 +11,9 @@
     <body class="body">
         <div style="text-align: center;">
             <h1>
-                <img id="bugyo1" src="images/bugyo.png" style="width: 60px";></img>
+                <img id="lbugyo" src="images/bugyo.png" onclick="lBugyo()" style="width: 60px";></img>
                 <font size="7">マイオフィス奉行</font>
-                <img id="bugyo2" src="images/bugyo.png" style="width: 60px";></img>
+                <img id="rbugyo" src="images/bugyo.png" onclick="rBugyo()" style="width: 60px";></img>
             </h1>
         </div>
         <div>
@@ -37,53 +37,9 @@
             <span class="mgl-30 mgr-20">文字数: <input type="text" id="len-num2" class="textbox4" value=100>文字
             <input type="button" id="button3" value="お裁き" class="button" onclick="osabaki3()"><span class="mgl-10" id="status3"></span><br></form></div>
         </div>
-        <script type="text/javascript">
-        "use stirct";
-        const bugyo1 = document.getElementById("bugyo1");
-        const bugyo2 = document.getElementById("bugyo2");
-
-        // 左側の奉行の仕事
-        bugyo1.onclick = function(){
-            let msg = "マイオフィスの面倒な仕様はマイオフィス奉行にお任せあれ!!\n\n";
-            msg += "使い方指南:\n「入力内容」の欄に申請フォームで入力したい内容、「文字数」の欄に制限文字数を入力して「お裁き」ボタンを押します。";
-            msg += "クリップボードに内容がコピーされるので、後はCtrl+Vで入力したい箇所にペーストするだけです。\n";
-            msg += "作業終了時は「右側の奉行」をクリックしてフォームをクリアしましょう。";
-            alert(msg);
-        }
-        
-        // 右側の奉行の仕事
-        bugyo2.onclick = function(){
-            alert("本日の白州はこれまで!!\n\nマイオフィス奉行");
-
-            // クリップボードのクリア作業
-            clearClipboard();
-
-            // フォームのクリア
-            document.getElementById("halftofull").value = "";
-            document.getElementById("sentence").value = "";
-            document.getElementById("longsentence").value = "";
-            document.getElementById("status1").innerHTML = "";
-            document.getElementById("status2").innerHTML = "";
-            document.getElementById("status3").innerHTML = "";
-        }
-
-        function clearClipboard(){
-            document.getElementById("halftofull").value = " ";
-            document.getElementById("sentence").value = " ";
-            document.getElementById("len-num1").value = 15;
-            document.getElementById("longsentence").value = " ";
-            document.getElementById("len-num2").value = 100;
-            const result1 = document.getElementsByTagName("input")[0];
-            result1.select();
-            document.execCommand("copy");
-            const result2 = document.getElementsByTagName("input")[2];
-            result2.select();
-            document.execCommand("copy");
-            const result3 = document.getElementsByTagName("textarea")[0];
-            result3.select();
-            document.execCommand("copy");
-        }
-        </script>
         <script type="text/javascript" src="js/bugyo.js"></script>
+        <script type="text/javascript">
+            "use stirct";
+        </script>
     </body>
 </html>
