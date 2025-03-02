@@ -120,11 +120,11 @@ function showLength(value, code) {
 function showSentenceLength(value) {
     document.getElementById("inputlength2").innerHTML = value.length;
     let remainLength = Number(document.getElementById("len-num1").value) - value.length;
-    document.getElementById("remainlength2").innerHTML = remainLength > 0 ? remainLength : 0;
+    document.getElementById("remainlength2").innerHTML = `残り文字数: ${ remainLength > 0 ? remainLength : 0 }文字`;
 }
 
 function showLongSentenceLength(value) {
     document.getElementById("inputlength3").innerHTML = value.length;
     let remainLength = Number(document.getElementById("len-num2").value) - value.length;
-    document.getElementById("remainlength3").innerHTML = remainLength > 0 ? remainLength : 0;
+    document.getElementById("remainlength3").innerHTML = `残り文字数: ${remainLength > 0 ? remainLength : 0}文字`;
 }
