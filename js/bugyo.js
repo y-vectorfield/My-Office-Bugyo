@@ -75,9 +75,8 @@ function osabaki1(){
     }
     document.getElementById("halftofull").value = toFullWidth(value);
     document.getElementById("status1").innerHTML = "お裁き完了!!";
-    const result = document.getElementsByTagName("input")[0];
-    result.select();
-    document.execCommand("copy");
+    const result = document.getElementsByTagName("input")[0].value;
+    navigator.clipboard.writeText(result);
 }
 
 function osabaki2(){
@@ -93,9 +92,8 @@ function osabaki2(){
     }
     document.getElementById("sentence").value = full_and_length(value, length);
     document.getElementById("status2").innerHTML = "お裁き完了!!";
-    const result = document.getElementsByTagName("input")[2];
-    result.select();
-    document.execCommand("copy");
+    const result = document.getElementsByTagName("input")[2].value;
+    navigator.clipboard.writeText(result);
 }
 
 function osabaki3(){
@@ -111,7 +109,6 @@ function osabaki3(){
     }
     document.getElementById("longsentence").value = full_and_length(value, length);
     document.getElementById("status3").innerHTML = "お裁き完了!!";
-    const result = document.getElementsByTagName("textarea")[0];
-    result.select();
-    document.execCommand("copy");
+    const result = document.getElementsByTagName("textarea")[0].value;
+    navigator.clipboard.writeText(result);
 }
