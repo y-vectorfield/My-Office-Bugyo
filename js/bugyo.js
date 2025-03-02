@@ -119,12 +119,12 @@ function showLength(value, code) {
 
 function showSentenceLength(value) {
     document.getElementById("inputlength2").innerHTML = value.length;
-    let limitLength = Number(document.getElementById("len-num1").value);
-    document.getElementById("remainlength2").innerHTML = limitLength - value.length;
+    let remainLength = Number(document.getElementById("len-num1").value) - value.length;
+    document.getElementById("remainlength2").innerHTML = remainLength > 0 ? remainLength : 0;
 }
 
 function showLongSentenceLength(value) {
     document.getElementById("inputlength3").innerHTML = value.length;
-    let limitLength = Number(document.getElementById("len-num2").value);
-    document.getElementById("remainlength3").innerHTML = limitLength - value.length;
+    let remainLength = Number(document.getElementById("len-num2").value) - value.length;
+    document.getElementById("remainlength3").innerHTML = remainLength > 0 ? remainLength : 0;
 }
