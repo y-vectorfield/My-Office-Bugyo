@@ -77,6 +77,9 @@ function osabaki1(){
     document.getElementById("status1").innerHTML = "お裁き完了!!";
     const result = document.getElementsByTagName("input")[0].value;
     navigator.clipboard.writeText(result);
+    document.getElementById("halftofull").value = "";
+    document.getElementById("inputlength").value = 0;
+    document.getElementById("osabaki1results").innerHTML = `お裁きの結果: ${result}`;
 }
 
 function osabaki2(){
@@ -94,6 +97,9 @@ function osabaki2(){
     document.getElementById("status2").innerHTML = "お裁き完了!!";
     const result = document.getElementsByTagName("input")[2].value;
     navigator.clipboard.writeText(result);
+    document.getElementById("sentence").value = "";
+    document.getElementById("inputlength2").value = 0;
+    document.getElementById("osabaki2results").innerHTML = `お裁きの結果: ${result}`;
 }
 
 function osabaki3(){
@@ -111,16 +117,25 @@ function osabaki3(){
     document.getElementById("status3").innerHTML = "お裁き完了!!";
     const result = document.getElementsByTagName("textarea")[0].value;
     navigator.clipboard.writeText(result);
+    document.getElementById("longsentence").value = "";
+    document.getElementById("inputlength3").value = 0;
+    document.getElementById("osabaki3results").innerHTML = `お裁きの結果: ${result}`;
 }
 
 function showLength(mode, value) {
     if (mode == 1) {
+        document.getElementById("status1").innerHTML = "";
+        document.getElementById("osabaki1results").innerHTML = "";
         document.getElementById("inputlength").innerHTML = value.length;
     } else if (mode == 2) {
+        document.getElementById("status2").innerHTML = "";
+        document.getElementById("osabaki2results").innerHTML = "";
         document.getElementById("inputlength2").innerHTML = value.length;
         let remainLength = Number(document.getElementById("len-num1").value) - value.length;
         document.getElementById("remainlength2").innerHTML = `残り文字数: ${ remainLength > 0 ? remainLength : 0 }文字`;
     } else if (mode == 3) {
+        document.getElementById("status3").innerHTML = "";
+        document.getElementById("osabaki3results").innerHTML = "";
         document.getElementById("inputlength3").innerHTML = value.length;
         let remainLength = Number(document.getElementById("len-num2").value) - value.length;
         document.getElementById("remainlength3").innerHTML = `残り文字数: ${remainLength > 0 ? remainLength : 0}文字`;
