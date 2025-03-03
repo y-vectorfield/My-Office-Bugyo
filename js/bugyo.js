@@ -113,18 +113,16 @@ function osabaki3(){
     navigator.clipboard.writeText(result);
 }
 
-function showLength(value, code) {
-    document.getElementById("inputlength").innerHTML = value.length;
-}
-
-function showSentenceLength(value) {
-    document.getElementById("inputlength2").innerHTML = value.length;
-    let remainLength = Number(document.getElementById("len-num1").value) - value.length;
-    document.getElementById("remainlength2").innerHTML = `残り文字数: ${ remainLength > 0 ? remainLength : 0 }文字`;
-}
-
-function showLongSentenceLength(value) {
-    document.getElementById("inputlength3").innerHTML = value.length;
-    let remainLength = Number(document.getElementById("len-num2").value) - value.length;
-    document.getElementById("remainlength3").innerHTML = `残り文字数: ${remainLength > 0 ? remainLength : 0}文字`;
+function showLength(mode, value) {
+    if (mode == 1) {
+        document.getElementById("inputlength").innerHTML = value.length;
+    } else if (mode == 2) {
+        document.getElementById("inputlength2").innerHTML = value.length;
+        let remainLength = Number(document.getElementById("len-num1").value) - value.length;
+        document.getElementById("remainlength2").innerHTML = `残り文字数: ${ remainLength > 0 ? remainLength : 0 }文字`;
+    } else if (mode == 3) {
+        document.getElementById("inputlength3").innerHTML = value.length;
+        let remainLength = Number(document.getElementById("len-num2").value) - value.length;
+        document.getElementById("remainlength3").innerHTML = `残り文字数: ${remainLength > 0 ? remainLength : 0}文字`;
+    }
 }
