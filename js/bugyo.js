@@ -70,6 +70,9 @@ function full_and_length(value, length){
 function osabaki1(){
     const value = document.getElementById("halftofull").value;
     if(value==" " || value==""){
+        document.getElementById("status1").innerHTML = "";
+        document.getElementById("osabaki1results").innerHTML = "";
+        document.getElementById("inputlength").innerHTML = 0;
         document.getElementById("status1").innerHTML = "空文字では申請出来ませぬ!!";
         return;
     }
@@ -86,6 +89,10 @@ function osabaki2(){
     const value = document.getElementById("sentence").value;
     const length = document.getElementById("len-num1").value;
     if(value==" " || value==""){
+        document.getElementById("status2").innerHTML = "";
+        document.getElementById("osabaki2results").innerHTML = "";
+        document.getElementById("inputlength2").innerHTML = 0;
+        document.getElementById("remainlength2").innerHTML = "";
         document.getElementById("status2").innerHTML = "空文字では申請出来ませぬ!!";
         return;
     }
@@ -98,7 +105,7 @@ function osabaki2(){
     const result = document.getElementsByTagName("input")[2].value;
     navigator.clipboard.writeText(result);
     document.getElementById("sentence").value = "";
-    document.getElementById("inputlength2").value = 0;
+    document.getElementById("inputlength2").innerHTML = 0;
     document.getElementById("osabaki2results").innerHTML = `お裁きの結果: ${result}`;
 }
 
@@ -106,6 +113,10 @@ function osabaki3(){
     const value = document.getElementById("longsentence").value;
     const length = document.getElementById("len-num2").value;
     if(value==" " || value==""){
+        document.getElementById("status3").innerHTML = "";
+        document.getElementById("osabaki3results").innerHTML = "";
+        document.getElementById("inputlength3").value = 0;
+        document.getElementById("remainlength3").innerHTML = "";
         document.getElementById("status3").innerHTML = "空文字では申請出来ませぬ!!";
         return;
     }
