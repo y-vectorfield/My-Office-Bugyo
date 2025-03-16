@@ -9,36 +9,36 @@
     margin-right: 20px;
 }
 .textbox1{
-    font-size: 20px;
+    font-size: 30px;
     margin-left: 10px;
-    width: 500px;
-    height: 20px;
+    width: 80%;
+    height: 50px;
 }
 .textbox2{
-    font-size: 20px;
+    font-size: 30px;
     margin-left: 25px;
     margin-right: 5px;
     width: 40px;
-    height: 20px;
+    height: 50px;
 }
 .textbox3{
-    font-size: 20px;
+    font-size: 30px;
     margin-left: 30px;
-    width: 500px;
-    height: 80px;
+    width: 85%;
+    height: 100px;
 }
 .textbox4{
-    font-size: 20px;
+    font-size: 30px;
     margin-right: 5px;
-    width: 40px;
-    height: 20px;
+    width: 60px;
+    height: 30px;
 }
 .button{
-    font-size: 20px;
+    font-size: 25px;
     margin-left: 10px;
     background-color: burlywood;
     width: 100px;
-    height: 40px;
+    height: 50px;
 }
 body{
     background-color: darkseagreen;
