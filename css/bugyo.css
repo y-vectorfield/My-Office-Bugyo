@@ -1,4 +1,8 @@
 
+@font-face {
+    font-family: "myfont";
+    src: url("../fonts/myfont.ttf") format("truetype");
+}
 .mgl-10{
     margin-left : 10px;
 }
@@ -9,12 +13,14 @@
     margin-right: 20px;
 }
 .textbox1{
+    font-family: "myfont", "system-ui", serif;
     font-size: 30px;
     margin-left: 10px;
     width: 80%;
     height: 50px;
 }
 .textbox2{
+    font-family: "myfont", "system-ui", serif;
     font-size: 30px;
     margin-left: 25px;
     margin-right: 5px;
@@ -22,18 +28,21 @@
     height: 50px;
 }
 .textbox3{
+    font-family: "myfont", "system-ui", serif;
     font-size: 30px;
     margin-left: 30px;
     width: 85%;
     height: 100px;
 }
 .textbox4{
+    font-family: "myfont", "system-ui", serif;
     font-size: 30px;
     margin-right: 5px;
     width: 60px;
     height: 30px;
 }
 .button{
+    font-family: "myfont", "system-ui", serif;
     font-size: 25px;
     margin-left: 10px;
     background-color: burlywood;
@@ -42,4 +51,5 @@
 }
 body{
     background-color: darkseagreen;
+    font-family: "myfont", "system-ui", serif;
 }
