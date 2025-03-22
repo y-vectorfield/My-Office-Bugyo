@@ -19,6 +19,14 @@ function rBugyo(){
     document.getElementById("status1").innerHTML = "";
     document.getElementById("status2").innerHTML = "";
     document.getElementById("status3").innerHTML = "";
+    document.getElementById("inputlength").innerHTML = 0;
+    document.getElementById("inputlength2").innerHTML = 0;
+    document.getElementById("inputlength3").innerHTML = 0;
+    document.getElementById("osabaki1results").innerHTML = "";
+    document.getElementById("remainlength2").innerHTML = "";
+    document.getElementById("osabaki2results").innerHTML = "";
+    document.getElementById("remainlength3").innerHTML = "";
+    document.getElementById("osabaki3results").innerHTML = "";
 
     alert("本日の白州はこれまで!!\n\nマイオフィス奉行");
 }
